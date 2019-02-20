@@ -4,15 +4,16 @@ public void setup(){
 }
 
 public void draw(){
-  fractal(26);
+  fractal(26, 0, 0);
 }
 
-public void fractal(int len){
+public void fractal(int len, int x, int y){
+  int angleOne = x + 
   if(len <= 25){
     stroke(255);
-    rect(425, 325, 150, 150);
+    rect(425, 300, 150, 150);
   } else {
-    line(500, 375, (int)(1001 * Math.random()), (int)(751 * Math.random()));
-    fractal(len - 1);
+    line(x+ 500, y + 300, x + cos(angleOne) * length);
+    fractal(len - 1, x, y);
   }
 }
