@@ -8,7 +8,7 @@ public void setup(){
 }
 
 public void draw(){
-  fill(11, 102, 35);
+  fill(249, 215, 28);
   
   fractal(575, 375, 50, 0 * Math.PI / 2);
   fractal(500, 462, 50, 1 * Math.PI / 2);
@@ -22,8 +22,9 @@ public void draw(){
     fractal(850, 563, 50, i * Math.PI / 2);
   }
   
+  stroke(249, 215, 28);
   ellipse(500, 375, 175, 175);
-  fill(87,59,12);
+  fill(218, 43, 39);
   ellipse(500, 375, 150, 150);
   
   branchAngle += 0.01;
@@ -50,9 +51,7 @@ public void fractal(int x, int y, double branchLength, double angle){
   if(branchLength <= smallestBranch){
     return;
   } else {
-    if(branchLength <= 50){
-      stroke(0, 255, 0);
-    }
+      stroke(57, 255, 20);
     
     line(x, y, endX1, endY1);
     line(x, y, endX2, endY2);
